@@ -21,39 +21,38 @@
                 <img src="images/recepty-logo.svg" alt="Recepty logo">
             </div>
             <div class="hledani">
-                <!--
                 <label for="hledat">Hledat</label>
                 <div class="hledani-skupina">
-                    <input type="text" id="hledat" placeholder="Název receptu">
-                    <button>Hledat</button>
+                    <input onkeyup="hledat()" type="text" id="hledat" placeholder="Název receptu">
+                    <button onclick="hledat()">Hledat</button>
                 </div>
-                -->
             </div>
             <div class="kategorie">
-                <!--
                 <label for="kategorie">Kategorie</label>
-                <select id="kategorie">
+                <select onchange="hledat()" id="kategorie">
                     <option value=""></option>
                     <option>Snídaně</option>
                     <option>Hlavní jídlo</option>
                     <option>Dezert</option>
                 </select>
-                -->
             </div>
             <div class="razeni">
-                <!--
                 <label for="razeni">Seřadit</label>
-                <select id="razeni">
+                <select onchange="hledat()" id="razeni">
                     <option value=""></option>
-                    <option value="1">Od nejlepších</option>
-                    <option value="2">Od nejhorších</option>
+                    <option value="nejlepsi">Od nejlepších</option>
+                    <option value="nejhorsi">Od nejhorších</option>
                 </select>
-                -->
             </div>
         </header>
 
 
-        <div id="recepty" class="recepty">
+        <div class="recepty">
+            <!--<button class="tlacitko tlacitko-pridat">+ přidat recept</button>-->
+            <div id="recepty">
+
+            </div>
+
             <!--
             <div class="recept">
                 <div class="recept-obrazek">
@@ -67,28 +66,48 @@
             -->
         </div>
 
-        <div class="recept-detail">
-            <div class="recept-detail-obrazek">
-                    <img id="recept-foto" src="sem-doplnit-adresu-obrazku.jpg" alt="">
+        <div class="obsah">
+            <div id="recept-detail" class="recept-detail">
             </div>
 
-            <div class="recept-detail-info">
-                <header>
-                    <div class="recept-kategorie">
-                        <span class="fas fa-tag"></span> Kategorie:
-                        <span class="hodnota" id="recept-kategorie"><!-- sem se bude doplňovat --></span>
-                    </div>
-                    <div class="recept-hodnoceni">
-                        <span class="far fa-star"></span>
-                        <span class="hodnota" id="recept-hodnoceni"><!-- sem se bude doplňovat --></span>
-                    </div>
-                </header>
 
-                <h1 id="recept-nazev"><!-- sem se bude doplňovat --></h1>
+            <!--
+            <div id="recept-novy" class="recept-novy">
 
-                <p id="recept-popis"><!-- sem se bude doplňovat --></p>
+                <h2>Přidat nový recept</h2>
+
+                <form class="novy-formular">
+
+                    <label for="novy-nazev">Název receptu</label>
+                    <input type="text" id="novy-nazev">
+
+                    <label for="novy-popis">Popis</label>
+                    <textarea id="novy-popis" rows="10"></textarea>
+
+                    <label for="novy-hodnoceni">Hodnocení</label>
+                    <input type="number" id="novy-hodnoceni" step="0.1" max="5" min="0">
+
+                    <label for="novy-kategorie">Kategorie</label>
+                    <select id="novy-kategorie">
+                        <option value=""></option>
+                        <option>Snídaně</option>
+                        <option>Hlavní jídlo</option>
+                        <option>Dezert</option>
+                    </select>
+
+                    <label for="novy-obrazek">Obrázek</label>
+                    <input type="text" id="novy-obrazek">
+
+                </form>
+
+                <button class="tlacitko tlacitko-pridat">Uložit recept</button>
+                <button class="tlacitko">Zrušit</button>
+
             </div>
+            -->
+
         </div>
+
 
     </div>
 
