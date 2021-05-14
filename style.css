@@ -1,0 +1,249 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px 80px;
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+    /*
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    */
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.kontejner {
+    margin: auto;
+    min-width: 1020px;
+    max-width: 1300px;
+    display: grid;
+    grid-template-rows: 6rem minmax(40rem, auto);
+    grid-template-columns: 1.5fr 3fr;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+    overflow: hidden;
+}
+
+.hlavicka {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    background-image: linear-gradient(120deg, #fda085 0%, #f6d365 100%);
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.logo img {
+    margin-top: 15px;
+    height: 40px;
+}
+
+.hledani {
+    margin-right: 30px;
+}
+
+.kategorie {
+    margin-right: 10px;
+}
+
+.hlavicka label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hledani {
+    flex: 1;
+}
+
+.hledani-skupina {
+    display: flex;
+}
+
+.hledani input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #feada6;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    font-size: 20px;
+    outline: 0;
+}
+
+.hledani button {
+    padding: 8px 12px;
+    border: 1px solid #d86849;
+    background-color: #d86849;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+    outline: 0;
+}
+
+.hledani button:hover {
+    background-color: #ce3b12;
+    cursor: pointer;
+}
+
+
+.hlavicka select {
+    border: 1px solid #feada6;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 8px 12px;
+    outline: 0;
+}
+
+
+
+.recepty {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 10px;
+    background-color: #efefef;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.recept {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 5px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.recept:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.recept:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.recept:hover h3 {
+    color: #fda085;
+}
+
+.recept-obrazek {
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.recept-obrazek img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.recept-obrazek img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.recept-info {
+    flex: 1;
+}
+
+.recept-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+
+
+
+.recept-detail {
+    background: white;
+}
+
+.recept-detail-obrazek {
+    height: 300px;
+    position: relative;
+}
+
+/*
+.recept-detail-obrazek::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right, #fddb92 0%, #d1fdff 100%);
+    opacity: .0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+*/
+
+.recept-detail-obrazek img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recept-detail-info {
+   padding: 20px;
+}
+
+.recept-detail-info > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #a5a5a5;
+}
+
+.recept-detail-info .hodnota {
+    color: #555;
+}
+
+.recept-hodnoceni {
+    font-size: 16px;
+}
+
+.recept-detail h1 {
+    color: #feada6;
+}
