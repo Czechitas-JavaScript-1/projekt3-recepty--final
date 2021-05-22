@@ -36,7 +36,8 @@ let nalezeneRecepty = recepty;
 // po spusteni stranky zobrazime seznam receptu
 zobrazSeznamReceptu();
 
-
+// po spusteni nacteme posledni prohlizeny recept (pokud takovy je)
+zobrazPosledniRecept();
 
 
 function vytvorRecept(recept, index) {
@@ -134,6 +135,9 @@ function detailReceptu(indexReceptu) {
 	
 	detailWrapper.appendChild(obrazekWrapper);
 	detailWrapper.appendChild(infoWrapper);
+
+	// ulozime prohlizeny recept do Local Storage
+	localStorage.posledniRecept = indexReceptu;
 }
 
 
@@ -190,4 +194,17 @@ function hledat() {
 	}
 
 	zobrazSeznamReceptu();
+}
+
+function zobrazPosledniRecept() {
+	let posledniRecept = localStorage.posledniRecept;
+
+	if (posledniRecept !== null && posledniRecept !== undefined) {
+		// pokud posledni nacteny recept existuje, tak zobrazime detail
+		let indexReceptu = parseInt(posledniRecept);
+
+		if (indexReceptu >= 0 && indexReceptu < recepty.length) {
+			detailReceptu(indexReceptu);
+		}
+	}
 }
